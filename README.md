@@ -8,8 +8,8 @@ Antes de iniciar, você deve ter o Node.js e o NPM instalados em sua máquina.
 Primeiro, você deve clonar o projeto na sua máquina, para isso você pode colar o seguinte comando em seu terminal
 
 ```bash
-git clone https://github.com/ogabrielalves/cardapio-project.git
-cd cardapio-project
+git clone https://github.com/ogabrielalves/cardapio-digital-frontend.git
+cd cardapio-digital-frontend
 ```
 Para instalar as dependências, execute o seguinte comando:
 
