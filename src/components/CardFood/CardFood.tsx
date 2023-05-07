@@ -1,3 +1,6 @@
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
+
 import style from "./CardFood.module.scss";
 
 interface CardFoodProps {
@@ -16,6 +19,11 @@ function CardFood({ price, image, title }: CardFoodProps) {
           <b>Valor: </b>
           R$ {price}
         </p>
+      </div>
+      <div className={style.deleteIcon}>
+        <IconButton aria-label="delete" color="primary">
+          <DeleteIcon />
+        </IconButton>
       </div>
     </div>
   );

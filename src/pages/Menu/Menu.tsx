@@ -4,6 +4,7 @@ import { useFoodData } from "../../hooks/useFoodData";
 import CardFood from "../../components/CardFood/CardFood";
 import { Modal } from "../../components/Modal";
 import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
 
 import style from "./Menu.module.scss";
 
@@ -30,7 +31,12 @@ function Menu() {
               />
             ))}
           </div>
-          <Button variant="contained" onClick={handleOpenModal}>
+          <Button
+            startIcon={<AddIcon />}
+            sx={{ position: "fixed", bottom: "20px", right: "20px" }}
+            variant="contained"
+            onClick={handleOpenModal}
+          >
             Novo
           </Button>
         </>
