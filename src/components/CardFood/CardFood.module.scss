@@ -1,0 +1,25 @@
+.container {
+  border: 2px solid var(--border-color);
+  min-width: 400px;
+  max-width: 500px;
+  min-height: 100px;
+  display: flex;
+  box-shadow: 7px 5px 10px -1px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 7px 5px 10px -1px rgba(0, 0, 0, 0.37);
+
+  img {
+    border-right: 2px solid var(--border-color);
+  }
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
