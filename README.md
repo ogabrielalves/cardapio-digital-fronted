@@ -1,4 +1,4 @@
-# Cardápio Digital - Fronted
+# Cardápio Digital - Frontend
 Este é um projeto de um cardápio digital, voltada para estudos de uma criação Fullstack do zero.
 
 ## Requisitos 💻
