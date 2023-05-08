@@ -9,11 +9,31 @@ const postData = async (data: FoodData): AxiosPromise<unknown> => {
   return response;
 };
 
+const deleteData = async (id: number) => {
+  const response = axios.delete(API_URL + `/food/deletar/${id}`);
+  return (await response).data;
+};
+
+// METODO POST
 export function useFoodDataMutate() {
   const queryClient = useQueryClient();
 
   const mutate = useMutation({
     mutationFn: postData,
+    retry: 2,
+    onSuccess: () => {
+      queryClient.invalidateQueries(["food-data"]);
+    },
+  });
+
+  return mutate;
+}
+
+// METODO DELETE
+export function useFoodDataDelete() {
+  const queryClient = useQueryClient();
+
+  const mutate = useMutation(deleteData, {
     retry: 2,
     onSuccess: () => {
       queryClient.invalidateQueries(["food-data"]);

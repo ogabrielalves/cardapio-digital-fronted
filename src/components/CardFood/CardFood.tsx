@@ -1,15 +1,23 @@
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { useFoodDataDelete } from "../../hooks/useFoodDataMutate";
 
 import style from "./CardFood.module.scss";
 
 interface CardFoodProps {
+  id: number;
   price: number;
   title: string;
   image: string;
 }
 
-function CardFood({ price, image, title }: CardFoodProps) {
+function CardFood({ price, image, title, id }: CardFoodProps) {
+  const { mutate } = useFoodDataDelete();
+
+  const deleteItem = () => {
+    mutate(id);
+  };
+
   return (
     <div className={style.container}>
       <img width={"100px"} src={image} alt="" />
@@ -21,7 +29,7 @@ function CardFood({ price, image, title }: CardFoodProps) {
         </p>
       </div>
       <div className={style.deleteIcon}>
-        <IconButton aria-label="delete" color="primary">
+        <IconButton aria-label="delete" color="primary" onClick={deleteItem}>
           <DeleteIcon />
         </IconButton>
       </div>

@@ -28,6 +28,7 @@ function Menu() {
                 image={food.image}
                 price={food.price}
                 title={food.title}
+                id={food.id}
               />
             ))}
           </div>
