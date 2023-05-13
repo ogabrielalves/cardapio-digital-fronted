@@ -10,7 +10,7 @@ const postData = async (data: FoodData): AxiosPromise<unknown> => {
 };
 
 const deleteData = async (id: number) => {
-  const response = axios.delete(API_URL + `/food/deletar/${id}`);
+  const response = axios.delete(API_URL + `/food/delete/${id}`);
   return (await response).data;
 };
 
