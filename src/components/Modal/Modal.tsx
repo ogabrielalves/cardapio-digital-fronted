@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Input } from "../Input";
 import { useFoodDataMutate } from "../../hooks/useFoodDataMutate";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import { FoodData } from "../../interface/FoodData";
 import Button from "@mui/material/Button";
 
@@ -21,6 +23,7 @@ function Modal({ closeModal }: ModalProps) {
       title,
       price,
       image,
+      id: 0,
     };
     mutate(foodData);
   };
@@ -33,7 +36,12 @@ function Modal({ closeModal }: ModalProps) {
   return (
     <div className={style.modalOverflow}>
       <div className={style.modalBody}>
-        <h2>Cadastre um item novo ao Menu!</h2>
+        <div className={style.boxTop}>
+          <h2>Cadastre um alimento novo!</h2>
+          <IconButton aria-label="delete" size="large" onClick={closeModal}>
+            <CloseIcon fontSize="inherit" />
+          </IconButton>
+        </div>
         <form className={style.inputContainer}>
           <Input label="Titulo do item" value={title} updateValue={setTitle} />
           <Input label="Preço" value={price} updateValue={setPrice} />

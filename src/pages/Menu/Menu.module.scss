@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.titleText {
+    margin-bottom: 15px;
+}
+
 .cardGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

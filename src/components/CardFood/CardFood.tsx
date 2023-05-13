@@ -25,7 +25,7 @@ function CardFood({ price, image, title, id }: CardFoodProps) {
         <h2>{title}</h2>
         <p>
           <b>Valor: </b>
-          R$ {price}
+          R$ {price}.00
         </p>
       </div>
       <div className={style.deleteIcon}>

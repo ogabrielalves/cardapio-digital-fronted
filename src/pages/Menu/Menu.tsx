@@ -20,7 +20,7 @@ function Menu() {
     <div className={style.container}>
       {data ? (
         <>
-          <h1>Menu</h1>
+          <h1 className={style.titleText}>Cardápio Digital</h1>
           <div className={style.cardGrid}>
             {data.map((food) => (
               <CardFood
