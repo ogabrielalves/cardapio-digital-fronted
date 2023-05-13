@@ -1,6 +1,13 @@
 # Cardápio Digital - Frontend
 Este é um projeto de um cardápio digital, voltada para estudos de uma criação Fullstack do zero.
 
+## Tecnologias 📦
+- CSS Modules
+- Material UI
+- React Query
+- SASS
+- React Router Dom
+
 ## Requisitos 💻
 Antes de iniciar, você deve ter o Node.js e o NPM instalados em sua máquina.
 
